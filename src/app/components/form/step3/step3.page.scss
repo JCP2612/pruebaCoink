@@ -1,0 +1,68 @@
+#container-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-bottom: 15px;
+}
+#container-header_step {
+  padding-top: 44px;
+}
+#container-step {
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #1eea00;
+  padding-right: 25px;
+}
+#container-step_title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  order: 2;
+  .subtitle {
+    padding-top: 10px;
+    font-family: AvenirLTStd-Roman;
+    font-size: 14px;
+    opacity: 100%;
+    color: #757575;
+  }
+  .title {
+    padding-top: 20px;
+    font-family: Monserrat;
+    font-size: 16px;
+    opacity: 100%;
+  }
+}
+#container-step_contract {
+  display: flex;
+  flex-direction: column;
+  .container-step_contract--title {
+    padding-top: 30px;
+    font-family: Monserrat;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+  }
+  .container-step_contract--subtitle {
+    font-family: AvenirLTStd-Roman;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 15px;
+  }
+}
+ion-icon {
+  width: 2.5rem;
+  height: 2rem;
+  padding-left: 15px;
+}
+ion-text {
+  font-family: Monserrat;
+  padding-left: 44px;
+}
+ion-img {
+  padding-top: 25px;
+  padding-left: 30px;
+}
+.oink {
+  width: 80%;
+  padding-top: 20px;
+}

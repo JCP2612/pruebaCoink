@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'step2',
     loadChildren: () => import('./components/form/step2/step2.module').then( m => m.Step2PageModule)
   },
+  {
+    path: 'step3',
+    loadChildren: () => import('./components/form/step3/step3.module').then( m => m.Step3PageModule)
+  },
 ];
 
 @NgModule({
