@@ -1,0 +1,12 @@
+#container {
+  display: flex;
+  justify-content: center;
+  top: 30%;
+  position: relative;
+}
+ion-img {
+  width: 50%;
+}
+.no-scroll {
+  --overflow: hidden;
+}
