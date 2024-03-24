@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div id="container-header">
+      <ion-icon color="coink" name="chevron-back-outline" src="assets/svg/chevron-back-outline.svg"></ion-icon>
+      <div id="container-header_step">
+        <ion-text color="coink-2">NÚMERO CELULAR</ion-text>
+        <ion-img src="assets/svg/step1.svg"></ion-img>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="no-scroll" collapse="condense">
+  <div id="container-step">
+    <ion-img src="assets/svg/Oink.svg" class="oink"></ion-img>
+    <ion-text class="subtitle">Para comenzar, por favor ingresa <b> tu número celular.</b> </ion-text>
+  </div>
+  <div id="container-step_input">
+    <ion-input type="number" fill="solid" placeholder="( X X X - X X X X X X )" class="input"></ion-input>
+  </div>
+  <div id="container-login_boton">
+    <ion-button color="coink">Siguiente</ion-button>
+  </div>
+
+</ion-content>

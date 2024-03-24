@@ -1,0 +1,57 @@
+#container-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-bottom: 15px;
+}
+#container-header_step {
+  padding-top: 44px;
+}
+#container-step {
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #1eea00;
+  padding-right: 25px;
+}
+#container-step_input {
+  padding: 25px 30px 6.7rem;
+}
+ion-icon {
+  width: 2.5rem;
+  height: 2rem;
+  padding-left: 15px;
+}
+ion-text {
+  font-family: Monserrat;
+  padding-left: 44px;
+}
+ion-img {
+  padding-top: 25px;
+  padding-left: 30px;
+}
+ion-button {
+  font-family: Monserrat;
+  font-size: 16px;
+  padding: 25px 25px;
+  --border-radius: 25px;
+  width: 100%;
+}
+.oink {
+  width: 50%;
+  padding-top: 70px;
+}
+.subtitle {
+  padding-top: 85px;
+  font-family: AvenirLTStd-Roman;
+  font-size: 16px;
+  opacity: 100%;
+  color: #757575;
+}
+.input {
+  font-family: AvenirLTStd-Roman;
+  text-align: center;
+  font-size: 24px;
+}
+.no-scroll {
+  --overflow: hidden;
+}
