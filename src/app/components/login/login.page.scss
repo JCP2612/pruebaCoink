@@ -1,0 +1,35 @@
+#container-login {
+  top: 15%;
+  position: relative;
+}
+#container-login_logo {
+  padding-bottom: 25px;
+}
+#container-login_boton {
+  padding-top: 65px;
+  position: relative;
+}
+ion-img {
+  width: 50%;
+  left: 25%;
+  position: relative;
+}
+ion-text {
+  font-family: Monserrat;
+  text-align: center;
+  h1 {
+    font-size: 18px;
+  }
+}
+ion-button {
+  font-family: Monserrat;
+  font-size: 16px;
+  display: flex;
+  order: 2;
+  padding: 3px 25px 3px 25px;
+  --border-radius: 25px;
+  width: 100%;
+}
+.no-scroll {
+  --overflow: hidden;
+}
