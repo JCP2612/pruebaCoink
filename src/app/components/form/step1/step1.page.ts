@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-step1',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Step1Page implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+  
+  formulariodos(){
+    this.router.navigate(['/step2']);
+  }
+
+  retroceder(){
+    this.router.navigate(['/login'])
+  }
 
   ngOnInit() {
   }
