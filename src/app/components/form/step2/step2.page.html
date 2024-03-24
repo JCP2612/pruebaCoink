@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <div id="container-header">
+      <ion-icon color="coink" name="chevron-back-outline" src="assets/svg/chevron-back-outline.svg"></ion-icon>
+      <div id="container-header_step">
+        <ion-text color="coink-2">DATOS DE CUENTA</ion-text>
+        <ion-img src="assets/svg/step2.svg"></ion-img>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" collapse="condense">
+  <div id="container-step">
+    <ion-img src="assets/svg/Oink-M.svg" class="oink"></ion-img>
+    <div id="container-step_title">
+      <ion-text class="title" color="coink-2">¿CUÁLES SON TUS DATOS?</ion-text>
+      <ion-text class="subtitle">Ahora necesitamos saber algunos datos tuyos
+      </ion-text>
+    </div>
+  </div>
+  <div id="container-step_title--form">
+    <ion-text class="title_form" color="coink-2">Documento de Identidad</ion-text>
+  </div>
+  <div id="container-step_form">
+    <ion-item>
+      <ion-select label="Tipo de documento" label-placement="floating" color="medium">
+        <ion-select-option value="Cedula">Cedula de ciudadania</ion-select-option>
+        <ion-select-option value="tarjeta">Tarjeta de Identidad</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Número de documento" label-placement="floating" color="medium"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Fecha de expedición del documento" label-placement="floating" color="medium"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Fecha de nacimiento" label-placement="floating" color="medium"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-select label="Genero" label-placement="floating" color="medium">
+        <ion-select-option value="femenino">Femenino</ion-select-option>
+        <ion-select-option value="masculino">Masculino</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+  <div id="container-step_title--form2">
+    <ion-text class="title_form" color="coink-2">Configura tu cuenta</ion-text>
+  </div>
+  <div id="container-step_form2">
+    <ion-item>
+      <ion-input label="Correo electrónico" label-placement="floating" color="medium"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Confirmar correo electrónico" label-placement="floating" color="medium"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="PIN de seguridad" label-placement="floating" color="medium"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Confirmar PIN de seguridad" label-placement="floating" color="medium"></ion-input>
+    </ion-item>
+  </div>
+  <div id="container-step_button">
+    <ion-button color="coink">Siguiente</ion-button>
+  </div>
+</ion-content>

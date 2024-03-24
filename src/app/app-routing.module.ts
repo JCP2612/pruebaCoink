@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./components/login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'step2',
+    loadChildren: () => import('./components/form/step2/step2.module').then( m => m.Step2PageModule)
+  },
 ];
 
 @NgModule({
