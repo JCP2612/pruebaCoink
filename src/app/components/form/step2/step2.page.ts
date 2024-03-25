@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute, Data } from '@angular/router';
+import { timeout } from 'rxjs';
 import { GetPayloadService } from 'src/app/service/get-payload.service';
 import { LocalStorageService } from 'src/app/service/local-storage.service';
+import { SpinnerService } from 'src/app/service/spinner.service';
+
 @Component({
   selector: 'app-step2',
   templateUrl: './step2.page.html',
@@ -28,7 +31,8 @@ export class Step2Page implements OnInit {
     private payloadService: GetPayloadService,
     private localStorage: LocalStorageService,
     private activatedRoute: ActivatedRoute,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private spinnerService: SpinnerService
   ) {
     this.form = fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -61,7 +65,7 @@ export class Step2Page implements OnInit {
 
   jsonObject: form = new form();
 
-  siguiente() {
+  async siguiente() {
     if (
       this.form.valid &&
       this.form.controls['pin'].value ==
@@ -81,9 +85,12 @@ export class Step2Page implements OnInit {
         confirmEmail: this.form.controls['confirmEmail'].value,
         trackId: this.trackId,
       };
-      console.log(result);
-      this.localStorage.setItem(this.trackId, JSON.stringify(result));
-      this.router.navigate(['/step3', this.trackId]);
+      await this.spinnerService.presentSpinner();
+      setTimeout(() => {
+        this.spinnerService.dismissSpinner();
+        this.localStorage.setItem(this.trackId, JSON.stringify(result));
+        this.router.navigate(['/step3', this.trackId]);
+      }, 1000);
     }
   }
 
