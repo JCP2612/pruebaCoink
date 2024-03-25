@@ -11,7 +11,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" collapse="condense">
+<ion-content [fullscreen]="true" collapse="condense" [formGroup]="form">
   <div id="container-step">
     <ion-img src="assets/svg/Oink-M.svg" class="oink"></ion-img>
     <div id="container-step_title">
@@ -25,24 +25,30 @@
   </div>
   <div id="container-step_form">
     <ion-item>
-      <ion-select label="Tipo de documento" label-placement="floating" color="medium">
-        <ion-select-option value="Cedula">Cedula de ciudadania</ion-select-option>
-        <ion-select-option value="tarjeta">Tarjeta de Identidad</ion-select-option>
+      <ion-select label="Tipo de documento" label-placement="floating" color="medium" formControlName="documentType">
+        <ion-select-option *ngFor="let item of identificators"
+          [value]="item.description">{{item.description}}</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
-      <ion-input label="Número de documento" label-placement="floating" color="medium"></ion-input>
+      <ion-input label="Número de documento" label-placement="floating" color="medium"
+        formControlName="identificationNumber" class="label" type="number"
+        required="Este campo no puede ir vacio"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input label="Fecha de expedición del documento" label-placement="floating" color="medium"></ion-input>
+      <ion-input label="Fecha de expedición del documento" label-placement="floating" color="medium"
+        formControlName="expeditionDate"></ion-input>
     </ion-item>
+    <ion-label class="label" color="coink-2">Por favor ingresar DD/MM/YYYY</ion-label>
     <ion-item>
-      <ion-input label="Fecha de nacimiento" label-placement="floating" color="medium"></ion-input>
+      <ion-input label="Fecha de nacimiento" label-placement="floating" color="medium"
+        formControlName="bornDate"></ion-input>
     </ion-item>
+    <ion-label class="label" color="coink-2">Por favor ingresar DD/MM/YYYY</ion-label>
     <ion-item>
-      <ion-select label="Genero" label-placement="floating" color="medium">
-        <ion-select-option value="femenino">Femenino</ion-select-option>
-        <ion-select-option value="masculino">Masculino</ion-select-option>
+      <ion-select label="Genero" label-placement="floating" color="medium" formControlName="gender">
+        <ion-select-option *ngFor="let item of genders"
+          [value]="item.description">{{item.description}}</ion-select-option>
       </ion-select>
     </ion-item>
   </div>
@@ -51,19 +57,33 @@
   </div>
   <div id="container-step_form2">
     <ion-item>
-      <ion-input label="Correo electrónico" label-placement="floating" color="medium"></ion-input>
+      <ion-input label="Correo electrónico" label-placement="floating" color="medium"
+        formControlName="email"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input label="Confirmar correo electrónico" label-placement="floating" color="medium"></ion-input>
+      <ion-input label="Confirmar correo electrónico" label-placement="floating" color="medium"
+        formControlName="confirmEmail"></ion-input>
+    </ion-item>
+    <ion-label *ngIf="form.controls['email'].value !== form.controls['confirmEmail'].value " color="danger">Este
+      campo
+      no coincide con el
+      correo</ion-label>
+    <ion-item>
+      <ion-input label="PIN de seguridad" label-placement="floating" color="medium" formControlName="pin"
+        type="password"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input label="PIN de seguridad" label-placement="floating" color="medium"></ion-input>
+      <ion-input label-placement="floating" color="medium" formControlName="confirmPin" type="password"
+        label="Confirmar PIN de seguridad">
+      </ion-input>
     </ion-item>
-    <ion-item>
-      <ion-input label="Confirmar PIN de seguridad" label-placement="floating" color="medium"></ion-input>
-    </ion-item>
+    <ion-label *ngIf="form.controls['pin'].value !== form.controls['confirmPin'].value " color="danger"
+      class="label">Este
+      campo
+      no coincide con el
+      PIN</ion-label>
   </div>
   <div id="container-step_button">
-    <ion-button color="coink" (click)="siguiente()">Siguiente</ion-button>
+    <ion-button color="coink" (click)="siguiente()" [disabled]="form.invalid">Siguiente</ion-button>
   </div>
 </ion-content>

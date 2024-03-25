@@ -20,7 +20,7 @@ const routes: Routes = [
     loadChildren: () => import('./components/login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'step2',
+    path: 'step2/:trackId',
     loadChildren: () => import('./components/form/step2/step2.module').then( m => m.Step2PageModule)
   },
   {
