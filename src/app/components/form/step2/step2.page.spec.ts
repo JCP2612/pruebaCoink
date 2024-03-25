@@ -5,11 +5,11 @@ describe('Step2Page', () => {
   let component: Step2Page;
   let fixture: ComponentFixture<Step2Page>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     fixture = TestBed.createComponent(Step2Page);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

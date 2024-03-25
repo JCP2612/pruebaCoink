@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -11,10 +11,10 @@ import { Step3Page } from './step3.page';
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
+    ReactiveFormsModule,
     IonicModule,
-    Step3PageRoutingModule
+    Step3PageRoutingModule,
   ],
-  declarations: [Step3Page]
+  declarations: [Step3Page],
 })
 export class Step3PageModule {}

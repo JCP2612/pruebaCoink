@@ -32,8 +32,7 @@
     </ion-item>
     <ion-item>
       <ion-input label="Número de documento" label-placement="floating" color="medium"
-        formControlName="identificationNumber" class="label" type="number"
-        required="Este campo no puede ir vacio"></ion-input>
+        formControlName="identificationNumber" type="number"></ion-input>
     </ion-item>
     <ion-item>
       <ion-input label="Fecha de expedición del documento" label-placement="floating" color="medium"
@@ -64,7 +63,8 @@
       <ion-input label="Confirmar correo electrónico" label-placement="floating" color="medium"
         formControlName="confirmEmail"></ion-input>
     </ion-item>
-    <ion-label *ngIf="form.controls['email'].value !== form.controls['confirmEmail'].value " color="danger">Este
+    <ion-label *ngIf="form.controls['email'].value !== form.controls['confirmEmail'].value " color="danger"
+      class="label">Este
       campo
       no coincide con el
       correo</ion-label>

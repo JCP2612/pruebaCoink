@@ -81,9 +81,9 @@ export class Step2Page implements OnInit {
         confirmEmail: this.form.controls['confirmEmail'].value,
         trackId: this.trackId,
       };
-
+      console.log(result);
       this.localStorage.setItem(this.trackId, JSON.stringify(result));
-      this.router.navigate(['/step3']);
+      this.router.navigate(['/step3', this.trackId]);
     }
   }
 
