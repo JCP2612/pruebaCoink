@@ -60,8 +60,7 @@ export class Step3Page implements OnInit {
         this.finishLog.cb = this.form.controls['cb'].value;
         this.localStorage.setItem(this.trackId, JSON.stringify(this.finishLog));
         this.openLog = this.localStorage.getItem(this.trackId);
-        this.newWindowLog.openNewWindow(this.openLog);
-        this.router.navigate(['/congrats']);
+        this.router.navigate(['/congrats', this.trackId]);
       }
     }, 1000);
   }

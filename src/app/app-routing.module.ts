@@ -39,8 +39,18 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'congrats',
-    loadChildren: () => import('./components/congrats/congrats.module').then( m => m.CongratsPageModule)
+    path: 'congrats/:trackId',
+    loadChildren: () =>
+      import('./components/congrats/congrats.module').then(
+        (m) => m.CongratsPageModule
+      ),
+  },
+  {
+    path: 'log-page/:trackId',
+    loadChildren: () =>
+      import('./components/log-page/log-page.module').then(
+        (m) => m.LogPagePageModule
+      ),
   },
 ];
 
