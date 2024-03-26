@@ -90,6 +90,13 @@
   --ion-color-coink-2-contrast-rgb: 255, 255, 255;
   --ion-color-coink-2-shade: #004238;
   --ion-color-coink-2-tint: #1a5d53;
+
+  --ion-color-coink-3: #00000033;
+  --ion-color-coink-3-rgb: 0, 0, 51;
+  --ion-color-coink-3-contrast: #ffffff;
+  --ion-color-coink-3-contrast-rgb: 255, 255, 255;
+  --ion-color-coink-3-shade: #00002d;
+  --ion-color-coink-3-tint: #1a1a47;
 }
 
 .ion-color-coink {
@@ -107,6 +114,14 @@
   --ion-color-contrast-rgb: var(--ion-color-coink-2-contrast-rgb) !important;
   --ion-color-shade: var(--ion-color-coink-2-shade) !important;
   --ion-color-tint: var(--ion-color-coink-2-tint) !important;
+}
+.ion-color-coink-3 {
+  --ion-color-base: var(--ion-color-coink-3) !important;
+  --ion-color-base-rgb: var(--ion-color-coink-3-rgb) !important;
+  --ion-color-contrast: var(--ion-color-coink-3-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-coink-3-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-coink-3-shade) !important;
+  --ion-color-tint: var(--ion-color-coink-3-tint) !important;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { LocalStorageService } from 'src/app/service/local-storage.service';
 import { form } from '../step2/step2.page';
 import { SpinnerService } from 'src/app/service/spinner.service';
+import { TargetBlanckLogService } from 'src/app/service/target-blanck-log.service';
 
 @Component({
   selector: 'app-step3',
@@ -25,14 +26,15 @@ export class Step3Page implements OnInit {
   public finishLog: any;
   public form: FormGroup;
 
-  public prueba: any;
+  public openLog: any;
 
   constructor(
     private router: Router,
     private localStorage: LocalStorageService,
     private fb: FormBuilder,
     private activatedRoute: ActivatedRoute,
-    private spinnerService: SpinnerService
+    private spinnerService: SpinnerService,
+    private newWindowLog: TargetBlanckLogService
   ) {
     this.form = fb.group({
       cb: [false, [Validators.requiredTrue]],
@@ -57,7 +59,9 @@ export class Step3Page implements OnInit {
         this.finishLog = JSON.parse(this.stringLog);
         this.finishLog.cb = this.form.controls['cb'].value;
         this.localStorage.setItem(this.trackId, JSON.stringify(this.finishLog));
-        this.prueba = this.localStorage.getItem(this.trackId);
+        this.openLog = this.localStorage.getItem(this.trackId);
+        this.newWindowLog.openNewWindow(this.openLog);
+        this.router.navigate(['/congrats']);
       }
     }, 1000);
   }

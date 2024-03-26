@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute, Data } from '@angular/router';
-import { timeout } from 'rxjs';
 import { GetPayloadService } from 'src/app/service/get-payload.service';
 import { LocalStorageService } from 'src/app/service/local-storage.service';
 import { SpinnerService } from 'src/app/service/spinner.service';

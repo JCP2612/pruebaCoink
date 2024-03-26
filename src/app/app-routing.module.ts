@@ -38,6 +38,10 @@ const routes: Routes = [
         (m) => m.Step3PageModule
       ),
   },
+  {
+    path: 'congrats',
+    loadChildren: () => import('./components/congrats/congrats.module').then( m => m.CongratsPageModule)
+  },
 ];
 
 @NgModule({

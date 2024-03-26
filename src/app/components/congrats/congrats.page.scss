@@ -1,0 +1,35 @@
+#container {
+  padding: 50% 1rem 1rem 2rem;
+}
+ion-card {
+  width: 90%;
+  border-radius: 10px;
+}
+ion-img {
+  width: 75%;
+  padding-left: 6.5rem;
+  padding-top: 50px;
+}
+ion-button {
+  font-family: Monserrat;
+  font-size: 16px;
+  padding: 3px 25px 15px 25px;
+  --border-radius: 25px;
+  width: 100%;
+}
+.title {
+  font-family: Monserrat;
+  font-size: 20px;
+  text-align: center;
+}
+.text {
+  font-family: AvenirLTStd-Roman;
+  color: #212121;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.no-scroll {
+  --overflow: hidden;
+}
