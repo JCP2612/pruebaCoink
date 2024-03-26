@@ -11,15 +11,15 @@ Open http://localhost:8100 to view it in the browser.
 The page will reload if you make edits.
 You will also see any lint errors in the console.
 
-Production build
+Production build:
 npm run build
 
 SE UTILIZO CAPACITOR Y PARA VERLO EN EL CELULAR SE USO ANDROID STUDIO
 
-SINCRONIZAR CON ANDROID STUDIO
+SINCRONIZAR CON ANDROID STUDIO:
 npx cap sync
 
-ABRIR ANDROID STUDIO (SE USO LA VERSION IGUANA 2023)
+ABRIR ANDROID STUDIO (SE USO LA VERSION IGUANA 2023):
 npx cap open android 
 
 //IMPLEMENTACION DE LAS API
