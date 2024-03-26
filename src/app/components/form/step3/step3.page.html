@@ -4,7 +4,7 @@
       <ion-icon color="coink" name="chevron-back-outline" src="assets/svg/chevron-back-outline.svg"
         (click)="retroceder()"></ion-icon>
       <div id="container-header_step">
-        <ion-text color="coink-2">FINALIZAR</ion-text>
+        <ion-text color="coink-2" class="text-initial">FINALIZAR</ion-text>
         <ion-img src="assets/svg/step3.svg"></ion-img>
       </div>
     </div>
@@ -34,10 +34,13 @@
       cuenta.<br><br>
       Recuerda que no necesitas saldo mínimo ni monto inicial para su apertura.</ion-text>
   </div>
+  <div id="container-step_read">
+    <ion-text color="coink-2" class="contrat">Lee tu contrato</ion-text>
+  </div>
   <div id="container-step_contract_chech">
-    <ion-checkbox class="checkbox" formControlName="cb">He leído ya acepto el contrato</ion-checkbox>
+    <ion-checkbox class="checkbox" formControlName="cb" class="text">He leído ya acepto el contrato</ion-checkbox>
   </div>
   <div id="container-step_button">
-    <ion-button color="coink" (click)="aceptar()" [disabled]="form.invalid">Aceptar</ion-button>
+    <ion-button color="coink" (click)="aceptar()" [disabled]="form.invalid">ACEPTAR</ion-button>
   </div>
 </ion-content>
